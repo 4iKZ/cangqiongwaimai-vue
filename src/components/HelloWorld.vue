@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <p>{{ name }}</p>
-    <p>数量：{{ count }}</p>
+    <p>数量：{{ count > 30000 ? "nb666" : "lj777" }}</p>
   </div>
 </template>
 
@@ -14,14 +14,10 @@ export default {
   props: {
     msg: String,
   },
-  // 组件的本地数据
-  // data 必须是一个函数，且该函数必须返回一个对象
-  // 这样每个组件实例可以维护一份被返回对象的独立的拷贝
-  // 如果 data 是一个对象，则所有组件实例将共享同一个对象
   data() {
     return {
-      name: "张三",
-      count: 0,
+      name: "郝思远",
+      count: 3025666,
     };
   },
 };
