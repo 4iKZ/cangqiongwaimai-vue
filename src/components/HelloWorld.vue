@@ -31,10 +31,13 @@
     <!-- 当sex等于0时显示"女" -->
     <div v-else>未知</div>
     <!-- 当sex为其他值时显示"未知" -->
+
+    <input type="button" value="发送请求" @click="sendRequest" />
   </div>
 </template>
 
 <script>
+import axios from "axios";
 /**
  * HelloWorld组件
  * @description Vue.js基础演示组件，用于展示数据绑定、条件渲染和事件处理等核心功能
@@ -97,6 +100,16 @@ export default {
     save() {
       // 显示保存成功的提示信息
       alert("保存成功");
+    },
+    /**
+     * 发送请求按钮点击事件处理函数
+     * @description 点击发送请求按钮时发送POST请求到后端
+     * @returns {void}
+     */
+    sendRequest() {
+      axios.post("/api/hello").then((res) => {
+        console.log(res.data);
+      });
     },
   },
 
