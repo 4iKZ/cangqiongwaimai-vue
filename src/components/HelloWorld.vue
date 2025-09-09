@@ -2,6 +2,7 @@
   <div class="hello">
     <p>{{ name }}</p>
     <p>数量：{{ count > 30000 ? "nb666" : "lj777" }}</p>
+    姓名：<input type="text" v-bind:value="name" />
   </div>
 </template>
 
